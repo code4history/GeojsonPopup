@@ -1,9 +1,11 @@
 {
   "name": "geojson_popup",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Popup Template Creator for GeoJson",
   "main": "index.js",
   "scripts": {
+    "build_l": "webpack --config webpack.config.l.js",
+    "build_o": "webpack --config webpack.config.o.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -13,8 +15,17 @@
   "author": "Kohei Otsuka",
   "license": "MIT",
   "dependencies": {
+    "fs-extra": "^9.0.1"
+  },
+  "devDependencies": {
+    "css-loader": "^3.6.0",
     "ejs": "^3.1.3",
-    "fs-extra": "^9.0.1",
-    "mustache": "^4.0.1"
+    "file-loader": "^6.0.0",
+    "leaflet": "^1.6.0",
+    "mustache": "^4.0.1",
+    "ol": "^6.3.1",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
   }
 }
