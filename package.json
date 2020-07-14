@@ -1,0 +1,20 @@
+{
+  "name": "geojson_popup",
+  "version": "1.0.0",
+  "description": "Popup Template Creator for GeoJson",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "GeoJson",
+    "Template"
+  ],
+  "author": "Kohei Otsuka",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.3",
+    "fs-extra": "^9.0.1",
+    "mustache": "^4.0.1"
+  }
+}
