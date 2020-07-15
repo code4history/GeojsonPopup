@@ -1,9 +1,10 @@
-const path = require('path');
+var webpack = require("webpack");
+var path = require('path')
 
 module.exports = {
-  entry: './test/src/index_o.js',
+  entry: './test/src/index_m.js',
   output: {
-    filename: 'bundle_o.js',
+    filename: 'bundle_m.js',
     path: path.resolve(__dirname, 'test/dist')
   },
   module: {
@@ -25,5 +26,10 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.ProvidePlugin({
+      mapboxgl: 'mapbox-gl'
+    })
+  ]
 };

@@ -12,14 +12,22 @@ module.exports = {
         test: /\.css$/,
         use: [
           'style-loader',
-          'css-loader'
+          {
+            loader: 'css-loader',
+            options: {
+              url: true
+            }
+          }
         ]
       },
       {
-        test: /\.png$/,
-        use: [
-          'file-loader'
-        ]
+        test: /\.(png|svg|jpg|gif)$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            name: './test/dist/img/icon/[name].[ext]'
+          }
+        }
       }
     ]
   }
